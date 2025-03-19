@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张三的个人网站 | 前端开发者</title>
+    <meta name="description" content="张三的个人作品集，专注Web开发与交互设计">
+    <style>
+        /* 基础样式 - 可修改配色 (#4CAF50为品牌色) */
+        :root {
+            --primary-color: #4CAF50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .nav-link {
+            color: #333;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        /* 主页横幅 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(45deg, #f3f4f6, white);
+        }
+
+        /* 作品集网格 */
+        .portfolio-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding: 2rem;
+        }
+
+        .portfolio-item {
+            border: 1px solid #eee;
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav-link {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .hero {
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#home" class="nav-link">主页</a>
+        <a href="#portfolio" class="nav-link">作品集</a>
+        <a href="#contact" class="nav-link">联系</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>你好，我是张三 👋</h1>
+            <p>前端开发者 | 专注于React与用户体验设计</p>
+            <a href="#contact"
+                style="background: var(--primary-color); color: white; padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none;">约个咖啡</a>
+        </div>
+    </section>
+
+    <section id="portfolio" style="margin-top: 80px;">
+        <h2 style="text-align: center;">近期作品</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>电商后台系统</h3>
+                <p>React + Node.js全栈项目，实现订单管理...</p>
+                <a href="#">查看案例 →</a>
+            </div>
+            <div class="portfolio-item">
+                <h3>数据可视化平台</h3>
+                <p>使用D3.js构建的实时数据仪表盘...</p>
+                <a href="#">查看案例 →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; padding: 4rem 2rem; background: #f8f9fa;">
+        <h2>找到我</h2>
+        <div style="margin: 1rem;">
+            <a href="mailto:your@email.com" style="color: var(--primary-color); margin: 0 1rem;">📧 Email</a>
+            <a href="https://github.com/yourprofile" target="_blank"
+                style="color: var(--primary-color); margin: 0 1rem;">💻 GitHub</a>
+        </div>
+    </section>
+</body>
+
+</html>
